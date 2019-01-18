@@ -27,9 +27,11 @@ namespace Company.Function
             dynamic data;
             HttpClient client;
             MediaTypeWithQualityHeaderValue header = new MediaTypeWithQualityHeaderValue("application/json");
+            
             using (client = new HttpClient())
             {
                 client.DefaultRequestHeaders.Accept.Add(header);
+                client.DefaultRequestHeaders.TryAddWithoutValidation("User-Agent", "vpi-DadTriggerFunction");
                 using (var res = await client.GetAsync(baseUrl))
                 {
                     using (var content = res.Content)
