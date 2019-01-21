@@ -48,9 +48,8 @@ namespace Company.Function
 
                 return data.joke != null
                     ? (ActionResult)new OkObjectResult($"{data.joke}")
-                    : new BadRequestObjectResult("Please pass a name on the query string or in the request body");
+                    : new BadRequestObjectResult("Something went wrong");
             }
-
         }
     }
 }
