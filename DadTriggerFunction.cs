@@ -19,6 +19,7 @@ namespace Company.Function
             [HttpTrigger(AuthorizationLevel.Anonymous, "get", "post", Route = null)] HttpRequest req,
             ILogger log)
         {
+	
             log.LogInformation("C# HTTP trigger function processed a request.");
 
             Console.WriteLine("Starting GetData.");
