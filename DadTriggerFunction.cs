@@ -37,13 +37,8 @@ namespace Company.Function
                 {
                     using (var content = res.Content)
                     {
-                        Console.WriteLine("We are now here.");
                         string input = await content.ReadAsStringAsync();
                         data = JsonConvert.DeserializeObject(input);
-                        if (data != null)
-                        {
-                            Console.WriteLine(data.joke);
-                        }
                     }
                 }
 
